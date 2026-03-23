@@ -24,7 +24,7 @@ export const Hero = () => {
                     </a>
                 </div>
             </div>
-            <div className="absolute top-1/4 -right-20 text-[20vw] font-bold opacity-[0.02] select-none pointer-events-none hidden xl:block leading-none tracking-tighter">
+            <div className="absolute top-1/4 -right-20 text-[19vw] font-bold opacity-[0.02] select-none pointer-events-none hidden xl:block leading-none tracking-tighter">
                 PORTFOLIO
             </div>
         </section>
