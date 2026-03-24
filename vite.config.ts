@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/WebPortfolio2603/', // Base path for GitHub Pages remove ltr
   plugins: [
     react(),
     tailwindcss(),
