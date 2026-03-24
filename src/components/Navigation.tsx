@@ -20,7 +20,7 @@ export const Navigation = () => {
                         <a
                             key={link}
                             href={`#${link}`}
-                            className="[writing-mode:vertical-rl] rotate-180 mono text-xs uppercase tracking-widest transition-opacity opacity-40 hover:opacity-100"
+                            className="[writing-mode:vertical-rl] rotate-180 mono text-xs uppercase tracking-widest transition-opacity opacity-60 hover:opacity-100"
                         >
                             {link}
                         </a>
@@ -34,7 +34,7 @@ export const Navigation = () => {
                         rel="noreferrer"
                         className="transition-transform hover:scale-110"
                     >
-                        <Linkedin className="w-4 h-4 transition-opacity opacity-40 hover:opacity-100" />
+                        <Linkedin className="w-4 h-4 transition-opacity opacity-60 hover:opacity-100" />
                     </a>
                     <a
                         href="https://github.com/waryab"
@@ -42,7 +42,7 @@ export const Navigation = () => {
                         rel="noreferrer"
                         className="transition-transform hover:scale-110"
                     >
-                        <Github className="w-4 h-4 transition-opacity opacity-40 hover:opacity-100" />
+                        <Github className="w-4 h-4 transition-opacity opacity-60 hover:opacity-100" />
                     </a>
                 </div>
             </div>
