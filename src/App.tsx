@@ -23,7 +23,7 @@ function App() {
           <Footer />
         </footer>
 
-        <div className="hidden xl:block fixed right-0 top-0 h-full w-20 border-l border-white/10 z-40 mix-blend-difference">
+        <div className="hidden md:block fixed right-0 top-0 h-full w-20 border-l border-white/10 z-40 mix-blend-difference select-none">
           <div className="h-full flex flex-col items-center justify-center gap-12 text-white">
             <span className="[writing-mode:vertical-rl] mono text-xs uppercase tracking-[0.5em] opacity-40">Software Engineer</span>
             <div className="w-px h-32 bg-white/20" />

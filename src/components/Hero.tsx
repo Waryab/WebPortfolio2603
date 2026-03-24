@@ -17,14 +17,14 @@ export const Hero = () => {
                     </div>
                     <a
                         href="#experience"
-                        className="group flex items-center gap-6 px-6 py-4 md:px-12 md:py-6 bg-black text-white rounded-full transition-all self-start lg:self-auto hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+                        className="group flex items-center gap-6 px-6 py-4 md:px-12 md:py-6 bg-black text-white rounded-full transition-all self-start lg:self-auto hover:scale-[1.02] active:scale-[0.98] shadow-lg select-none"
                     >
                         <span className="mono text-xs uppercase tracking-[0.2em]">View Work</span>
                         <ArrowDownRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
                     </a>
                 </div>
             </div>
-            <div className="absolute top-1/4 -right-20 text-[19vw] font-bold opacity-[0.02] select-none pointer-events-none hidden xl:block leading-none tracking-tighter">
+            <div className="absolute top-1/4 -right-20 text-[19vw] font-bold opacity-[0.02] select-none pointer-events-none hidden md:block leading-none tracking-tighter">
                 PORTFOLIO
             </div>
         </section>

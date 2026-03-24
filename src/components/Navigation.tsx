@@ -6,7 +6,7 @@ export const Navigation = () => {
     const navLinks = ['experience', 'education', 'skills', 'contact']
 
     return (
-        <nav className="fixed left-0 top-0 h-full w-12 md:w-20 border-r border-white/10 z-50 mix-blend-difference">
+        <nav className="fixed left-0 top-0 h-full w-12 md:w-20 border-r border-white/10 z-50 mix-blend-difference select-none">
             <div className="flex flex-col items-center justify-between h-full w-full py-12 text-white">
                 <button
                     onClick={scrollToTop}

@@ -1,5 +1,5 @@
 export const ExperienceItem = ({ role, company, period, description }: { role: string; company: string; period: string; description: string[] }) => (
-    <div className="grid grid-cols-1 md:grid-cols-[15rem_1fr] gap-12 mb-24 last:mb-0">
+    <div className="grid grid-cols-1 md:grid-cols-[15rem_1fr] gap-4 md:gap-12 mb-24 last:mb-0">
         <div className="mono text-xs opacity-40 uppercase tracking-[0.2em] pt-2">
             {period}
         </div>

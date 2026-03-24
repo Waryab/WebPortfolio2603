@@ -1,5 +1,4 @@
-
-import { Mail, Linkedin, ArrowDownRight } from "lucide-react";
+import { Mail, Linkedin, ArrowDownRight, Github } from "lucide-react";
 
 export const Contact = () => {
   const handleSubmit = async () => {
@@ -7,7 +6,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="md:min-h-screen py-32 pl-20 pr-8 md:pl-44 md:pr-24  bg-black text-white">
+    <section id="contact" className="md:min-h-[90vh] py-32 pl-20 pr-8 md:px-36 lg:px-44  bg-black text-white">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
@@ -18,25 +17,31 @@ export const Contact = () => {
             </h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <a href="mailto:contact@waryab.com" className="group flex items-center justify-between p-8 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all">
-                <div className="flex flex-col gap-2">
-                  <span className="mono text-xs opacity-50">EMAIL</span>
-                  <span className="text-l">contact@waryab.com</span>
-                </div>
-                <Mail className="w-6 h-6 opacity-50 group-hover:opacity-100" />
-              </a>
-              <a href="https://linkedin.com/in/waryab" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-8 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all">
-                <div className="flex flex-col gap-2">
-                  <span className="mono text-xs opacity-50">LINKEDIN</span>
-                  <span className="text-l">/in/waryab</span>
-                </div>
-                <Linkedin className="w-6 h-6 opacity-50 group-hover:opacity-100" />
-              </a>
+              <ContactLink
+                href="mailto:contact@waryab.com"
+                label="EMAIL"
+                value="contact@waryab.com"
+                icon={<Mail className="w-6 h-6 opacity-50 group-hover:opacity-100 mix-blend-difference" />}
+              />
+              <ContactLink
+                href="https://linkedin.com/in/waryab"
+                label="LINKEDIN"
+                value="/in/waryab"
+                icon={<Linkedin className="w-6 h-6 opacity-50 group-hover:opacity-100 mix-blend-difference" />}
+                external
+              />
+              <ContactLink
+                href="https://github.com/waryab"
+                label="GITHUB"
+                value="/waryab"
+                icon={<Github className="w-6 h-6 opacity-50 group-hover:opacity-100 mix-blend-difference" />}
+                external
+              />
             </div>
           </div>
 
           <div className="flex items-center">
-            <div className="w-full max-w-xl">
+            <div className="w-full">
                 <form className="space-y-8" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
@@ -54,7 +59,7 @@ export const Contact = () => {
                   </div>
                   <button 
                     type="submit" 
-                    className="group flex items-center gap-4 px-6 py-4 md:px-12 md:py-6 bg-white text-black rounded-full transition-all hover:scale-105"
+                    className="group flex items-center gap-4 px-6 py-4 md:px-12 md:py-6 bg-white text-black rounded-full transition-all hover:scale-105 select-none cursor-pointer"
                   >
                     <span className="mono text-sm uppercase tracking-widest">
                        Send Message
@@ -69,3 +74,25 @@ export const Contact = () => {
     </section>
   );
 };
+
+type ContactLinkProps = {
+  href: string;
+  label: string;
+  value: string;
+  icon: React.ReactNode;
+  external?: boolean;
+};
+
+const ContactLink = ({ href, label, value, icon, external }: ContactLinkProps) => (
+  <a
+    href={href}
+    className="group flex items-center justify-between p-4 md:p-8 border border-white/10 rounded-3xl hover:bg-white transition-all"
+    {...external ? { target: "_blank", rel: "noreferrer" } : {}}
+  >
+    <div className="flex flex-col gap-2 mix-blend-difference">
+      <span className="mono text-xs opacity-50">{label}</span>
+      <span className="text-l ">{value}</span>
+    </div>
+    {icon}
+  </a>
+);
