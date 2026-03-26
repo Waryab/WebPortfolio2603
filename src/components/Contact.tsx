@@ -18,7 +18,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="md:min-h-[90vh] py-32 pl-20 pr-8 md:px-36 lg:px-44  bg-black text-white relative">
+    <section id="contact" className="md:min-h-[90vh] py-8 md:py-32 pl-20 pr-8 md:px-36 lg:px-44  bg-black text-white relative">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>

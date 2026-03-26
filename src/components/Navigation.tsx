@@ -3,7 +3,15 @@ import { Github, Linkedin } from "lucide-react";
 export const Navigation = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    const navLinks = ['experience', 'education', 'skills', 'contact']
+    const navLinks = ['experience', 'education', 'skills', 'contact'];
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
+        e.preventDefault();
+        const section = document.getElementById(link);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <nav className="fixed left-0 top-0 h-full w-12 md:w-20 border-r border-white/10 z-50 mix-blend-difference select-none">
@@ -20,6 +28,7 @@ export const Navigation = () => {
                         <a
                             key={link}
                             href={`#${link}`}
+                            onClick={e => handleNavClick(e, link)}
                             className="[writing-mode:vertical-rl] rotate-180 mono text-xs uppercase tracking-widest transition-opacity opacity-60 hover:opacity-100"
                         >
                             {link}
