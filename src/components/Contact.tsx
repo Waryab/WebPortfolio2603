@@ -1,19 +1,24 @@
 import { Mail, Linkedin, ArrowDownRight, Github } from "lucide-react";
 import { SpotlightBox } from "./SpotlightBox";
+import { useState } from "react";
 
 export const Contact = () => {
-    const handleSubmit = async (event: any) => {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        formData.append("access_key", import.meta.env.VITE_FORM_ACCESS_KEY);
-        await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-    };
+  const [submission, setSubmission] = useState("");
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", import.meta.env.VITE_FORM_ACCESS_KEY);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+    const data = await response.json();
+    setSubmission(data.success ? "success" : "error");
+  };
 
   return (
-    <section id="contact" className="md:min-h-[90vh] py-32 pl-20 pr-8 md:px-36 lg:px-44  bg-black text-white">
+    <section id="contact" className="md:min-h-[90vh] py-32 pl-20 pr-8 md:px-36 lg:px-44  bg-black text-white relative">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
@@ -48,8 +53,19 @@ export const Contact = () => {
           </div>
 
           <div className="flex items-center">
-            <div className="w-full">
+            <div className="w-full relative">
+              {submission === "success" && (
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/90 backdrop-blur-xs scale-110">
+                  <div className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tighter">THANK YOU!</div>
+                  <div className="text-lg md:text-xl text-white mb-2 text-center opacity-50">Your message has been submitted.<br />I'll get back to you soon.</div>
+                </div>
+              )}
               <form className="space-y-8" onSubmit={handleSubmit}>
+                {submission == "error" && (
+                  <div className="mb-4 p-4 border border-red-500 text-red-500 mono">
+                    Something went wrong. Please try again, or contact me directly at <a href="mailto:contact@waryab.com" target="_blank" rel="noopener noreferrer" className="underline">contact@waryab.com</a>.
+                  </div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="mono text-xs opacity-50 uppercase tracking-widest">Name</label>
@@ -67,6 +83,7 @@ export const Contact = () => {
                 <button
                   type="submit"
                   className="group flex items-center gap-4 px-6 py-4 md:px-12 md:py-6 bg-white text-black rounded-full transition-all hover:scale-105 select-none cursor-pointer"
+                  disabled={submission === "success"}
                 >
                   <span className="mono text-sm uppercase tracking-widest">
                     Send Message
