@@ -2,9 +2,15 @@ import { Mail, Linkedin, ArrowDownRight, Github } from "lucide-react";
 import { SpotlightBox } from "./SpotlightBox";
 
 export const Contact = () => {
-  const handleSubmit = async () => {
-
-  };
+    const handleSubmit = async (event: any) => {
+        event.preventDefault();
+        const formData = new FormData(event.currentTarget);
+        formData.append("access_key", import.meta.env.VITE_FORM_ACCESS_KEY);
+        await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+    };
 
   return (
     <section id="contact" className="md:min-h-[90vh] py-32 pl-20 pr-8 md:px-36 lg:px-44  bg-black text-white">
@@ -47,16 +53,16 @@ export const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="mono text-xs opacity-50 uppercase tracking-widest">Name</label>
-                    <input required type="text" className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-white transition-colors text-lg" placeholder="Your Name" />
+                    <input required type="text" name="name" className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-white transition-colors text-lg" placeholder="Your Name" />
                   </div>
                   <div className="space-y-2">
                     <label className="mono text-xs opacity-50 uppercase tracking-widest">Email</label>
-                    <input required type="email" className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-white transition-colors text-lg" placeholder="your@email.com" />
+                    <input required type="email" name="email" className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-white transition-colors text-lg" placeholder="your@email.com" />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="mono text-xs opacity-50 uppercase tracking-widest">Message</label>
-                  <textarea required rows={4} className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-white transition-colors resize-none text-lg" placeholder="Tell me about your project"></textarea>
+                  <textarea required rows={4} name="message" className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-white transition-colors resize-none text-lg" placeholder="Tell me about your project"></textarea>
                 </div>
                 <button
                   type="submit"
