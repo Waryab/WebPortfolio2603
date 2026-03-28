@@ -1,17 +1,8 @@
 import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { handleNavClick, scrollToTop } from "../lib/utils";
 
 export const Navigation = () => {
-    const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
     const navLinks = ['experience', 'education', 'skills', 'contact'];
-
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
-        e.preventDefault();
-        const section = document.getElementById(link);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     return (
         <nav className="fixed left-0 top-0 h-full w-12 md:w-20 border-r border-white/10 z-50 mix-blend-difference select-none">

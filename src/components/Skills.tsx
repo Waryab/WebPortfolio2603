@@ -88,7 +88,7 @@ const skillCategories: SkillCategory[] = [
 ];
 
 export const Skills = () => (
-    <section id="skills" className="pb-32 pt-8 md:pt-32 px-8 md:px-24 xl:pr-64">
+    <section id="skills" className="pb-32 pt-8 md:pt-32 px-8 md:px-24">
         <div className="w-full">
             <SectionHeader number="03" title="The Toolkit" />
             <div className="flex flex-col gap-24">

@@ -1,6 +1,6 @@
-export const Footer = () => {
-    const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+import { scrollToTop } from "../lib/utils";
 
+export const Footer = () => {
     return (
         <div className="bg-black text-white">
             <div className="ml-12 md:mx-20 h-px bg-white/5"></div>

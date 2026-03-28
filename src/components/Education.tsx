@@ -2,7 +2,7 @@ import { SectionHeader } from "./SectionHeader";
 import { ExperienceItem } from "./ExperienceItem";
 
 export const Education = () => (
-  <section id="education" className="pb-32 pt-8 md:pt-32 px-8 md:px-24 xl:pr-64 relative">
+  <section id="education" className="pb-32 pt-8 md:pt-32 px-8 md:px-24 relative">
     <div className="w-full">
       <SectionHeader number="02" title="Education & Training" />
       <ExperienceItem 
