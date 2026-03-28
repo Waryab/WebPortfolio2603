@@ -1,4 +1,4 @@
-import { Mail, Linkedin, ArrowDownRight, Github } from "lucide-react";
+import { FiMail, FiGithub, FiArrowDownRight, FiLinkedin } from "react-icons/fi";
 import { SpotlightBox } from "./SpotlightBox";
 import { useState } from "react";
 
@@ -33,20 +33,20 @@ export const Contact = () => {
                 href="mailto:contact@waryab.com"
                 label="EMAIL"
                 value="contact@waryab.com"
-                icon={<Mail className="w-6 h-6 opacity-50" />}
+                icon={<FiMail className="w-6 h-6 opacity-50" />}
               />
               <ContactLink
                 href="https://linkedin.com/in/waryab"
                 label="LINKEDIN"
                 value="/in/waryab"
-                icon={<Linkedin className="w-6 h-6 opacity-50" />}
+                icon={<FiLinkedin className="w-6 h-6 opacity-50" />}
                 external
               />
               <ContactLink
                 href="https://github.com/waryab"
                 label="GITHUB"
                 value="/waryab"
-                icon={<Github className="size-6 opacity-50" />}
+                icon={<FiGithub className="size-6 opacity-50" />}
                 external
               />
             </div>
@@ -88,7 +88,7 @@ export const Contact = () => {
                   <span className="mono text-sm uppercase tracking-widest">
                     Send Message
                   </span>
-                  <ArrowDownRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
+                  <FiArrowDownRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
                 </button>
               </form>
             </div>

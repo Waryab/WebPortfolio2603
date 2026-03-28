@@ -1,4 +1,4 @@
-import { ArrowDownRight } from "lucide-react";
+import { FiArrowDownRight } from "react-icons/fi";
 
 export const Hero = () => {
     return (
@@ -20,7 +20,7 @@ export const Hero = () => {
                         className="group flex items-center gap-6 px-6 py-4 md:px-12 md:py-6 bg-black text-white rounded-full transition-all self-start lg:self-auto hover:scale-[1.02] active:scale-[0.98] shadow-lg select-none"
                     >
                         <span className="mono text-xs uppercase tracking-[0.2em]">View Work</span>
-                        <ArrowDownRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
+                        <FiArrowDownRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
                     </a>
                 </div>
             </div>

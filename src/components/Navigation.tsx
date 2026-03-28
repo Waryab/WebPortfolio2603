@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 export const Navigation = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -43,7 +43,7 @@ export const Navigation = () => {
                         rel="noreferrer"
                         className="transition-transform hover:scale-110"
                     >
-                        <Linkedin className="w-4 h-4 transition-opacity opacity-60 hover:opacity-100" />
+                        <FiLinkedin className="w-4 h-4 transition-opacity opacity-60 hover:opacity-100" />
                     </a>
                     <a
                         href="https://github.com/waryab"
@@ -51,7 +51,7 @@ export const Navigation = () => {
                         rel="noreferrer"
                         className="transition-transform hover:scale-110"
                     >
-                        <Github className="w-4 h-4 transition-opacity opacity-60 hover:opacity-100" />
+                        <FiGithub className="w-4 h-4 transition-opacity opacity-60 hover:opacity-100" />
                     </a>
                 </div>
             </div>
