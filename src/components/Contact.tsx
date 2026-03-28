@@ -1,6 +1,8 @@
 import { FiMail, FiGithub, FiArrowDownRight, FiLinkedin } from "react-icons/fi";
 import { SpotlightBox } from "./SpotlightBox";
 import { useState } from "react";
+import { motion } from "motion/react";
+import { fadeInUp } from "../lib/motionPresets";
 
 export const Contact = () => {
   const [submission, setSubmission] = useState("");
@@ -19,7 +21,7 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="md:min-h-[90vh] py-8 md:py-32 pl-20 pr-8 md:px-36 lg:px-44  bg-black text-white relative">
-      <div className="w-full">
+      <motion.div className="w-full" {...fadeInUp}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
             <p className="mono text-xs uppercase tracking-[0.3em] mb-8 opacity-50">Get in touch</p>
@@ -94,7 +96,7 @@ export const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

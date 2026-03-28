@@ -1,8 +1,15 @@
+
 import { SectionHeader } from "./SectionHeader";
 import { ExperienceItem } from "./ExperienceItem";
+import { motion } from "motion/react";
+import { fadeInUp } from "../lib/motionPresets";
 
 export const Education = () => (
-  <section id="education" className="pb-32 pt-8 md:pt-32 px-8 md:px-24 relative">
+  <motion.section
+    id="education"
+    className="pb-32 pt-8 md:pt-32 px-8 md:px-24 relative"
+    {...fadeInUp}
+  >
     <div className="w-full">
       <SectionHeader number="02" title="Education & Training" />
       <ExperienceItem 
@@ -29,5 +36,5 @@ export const Education = () => (
         ]}
       />
     </div>
-  </section>
+  </motion.section>
 );

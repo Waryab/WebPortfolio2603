@@ -1,6 +1,7 @@
 import React from "react";
 import type { IconType } from "react-icons";
 import { SectionHeader } from "./SectionHeader";
+import { motion } from "motion/react";
 import {
     SiJavascript,
     SiTypescript,
@@ -25,6 +26,7 @@ import {
     SiDocker,
     SiFigma
 } from "react-icons/si";
+import { fadeInUp } from "../lib/motionPresets";
 
 interface Skill {
     name: string;
@@ -88,7 +90,11 @@ const skillCategories: SkillCategory[] = [
 ];
 
 export const Skills = () => (
-    <section id="skills" className="pb-32 pt-8 md:pt-32 px-8 md:px-24">
+    <motion.section
+        id="skills"
+        className="pb-32 pt-8 md:pt-32 px-8 md:px-24"
+        {...fadeInUp}
+    >
         <div className="w-full">
             <SectionHeader number="03" title="The Toolkit" />
             <div className="flex flex-col gap-24">
@@ -108,7 +114,6 @@ export const Skills = () => (
                                         className: "size-8 drop-shadow-sm",
                                         style: { color: skill.color }
                                     })}
-
                                     <span className="mono text-[10px] uppercase tracking-widest opacity-40 group-hover:opacity-100 transition-all text-center" >
                                         {skill.name}
                                     </span>
@@ -123,5 +128,5 @@ export const Skills = () => (
                 ))}
             </div>
         </div>
-    </section>
+    </motion.section>
 );

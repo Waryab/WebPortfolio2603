@@ -1,10 +1,15 @@
 import { FiArrowDownRight } from "react-icons/fi";
 import { handleNavClick } from "../lib/utils";
+import { motion } from "motion/react";
+import { fadeInUp } from "../lib/motionPresets";
 
 export const Hero = () => {
     return (
         <section className="min-h-screen flex flex-col justify-center px-8 md:px-44 relative overflow-hidden">
-            <div className="w-full">
+            <motion.div
+                className="w-full"
+                {...fadeInUp}
+            >
                 <p className="mono text-xs uppercase tracking-[0.4em] mb-10 opacity-40">Software Engineer / Full Stack Developer</p>
                 <h1 className="text-[14vw] md:text-[11vw] leading-[0.8] font-bold tracking-tighter mb-16">
                     WARYAB<br />
@@ -25,7 +30,7 @@ export const Hero = () => {
                         <FiArrowDownRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
                     </a>
                 </div>
-            </div>
+            </motion.div>
             <div className="absolute top-1/4 -right-20 text-[19vw] font-bold opacity-[0.02] select-none pointer-events-none hidden md:block leading-none tracking-tighter">
                 PORTFOLIO
             </div>
