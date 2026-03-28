@@ -3,7 +3,6 @@ import { SectionHeader } from "./SectionHeader";
 
 export const Experience = () => (
     <section id="experience" className="pb-32 pt-8 md:pt-32 px-8 md:px-24 xl:pr-64 relative">
-        <div className="absolute top-0 right-0 w-px h-full bg-black/5 hidden xl:block" />
         <div className="w-full">
             <SectionHeader number="01" title="Work Experience" />
             <ExperienceItem

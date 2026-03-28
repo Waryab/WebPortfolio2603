@@ -23,7 +23,7 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
             <p className="mono text-xs uppercase tracking-[0.3em] mb-8 opacity-50">Get in touch</p>
-            <h2 className="text-5xl md:text-8xl font-bold tracking-tighter mb-16">
+            <h2 className="text-4xl md:text-8xl font-bold tracking-tighter mb-16">
               LET'S CREATE<br />
               <span className="serif italic font-normal opacity-50">SOMETHING NEW.</span>
             </h2>
