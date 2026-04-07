@@ -13,7 +13,7 @@ export const Hero = () => {
                 <p className="mono text-xs uppercase tracking-[0.4em] mb-10 opacity-40">Software Engineer / Full Stack Developer</p>
                 <h1 className="text-[14vw] md:text-[11vw] leading-[0.8] font-bold tracking-tighter mb-16">
                     WARYAB<br />
-                    <span className="serif italic font-normal opacity-30">JANJUA</span>
+                    <span className="serif italic font-normal opacity-30 text-[13.5vw] md:text-[10.5vw]">JANJUA</span>
                 </h1>
                 <div className="flex flex-col lg:flex-row gap-16 lg:items-end justify-between">
                     <div className="max-w-xl">
