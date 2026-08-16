@@ -95,7 +95,7 @@ export const Skills = () => (
         {...fadeInUp}
     >
         <div className="w-full">
-            <SectionHeader number="03" title="The Toolkit" />
+            <SectionHeader number="04" title="The Toolkit" />
             <div className="flex flex-col gap-24">
                 {skillCategories.map((category, catIdx) => (
                     <div key={category.title}>

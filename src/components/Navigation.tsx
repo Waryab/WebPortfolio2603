@@ -2,7 +2,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { handleNavClick, scrollToTop } from "../lib/utils";
 
 export const Navigation = () => {
-    const navLinks = ['experience', 'education', 'skills', 'contact'];
+    const navLinks = ['experience', 'education', 'projects', 'skills', 'contact'];
 
     return (
         <nav className="fixed left-0 top-0 h-full w-12 md:w-20 border-r border-white/10 z-50 mix-blend-difference select-none">
