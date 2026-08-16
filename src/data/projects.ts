@@ -13,7 +13,7 @@ export const projectsData: Project[] = [
             "Integrated automated invoicing, push notifications, and OAuth 2.0 authentication workflows."
         ],
         techStack: ["Laravel", "Vue.js", "TypeScript", "Angular", "Ionic", "Capacitor", "MySQL", "Tailwind CSS"],
-        imageUrl: "/projects/levelup-desk.jpg",
+        imageUrl: "/projects/levelup-desk.webp",
         imageAlt: "LevelUp Desk smart ergonomic workspace interface preview",
         liveUrl: "https://levelup-desk.com/"
     },
@@ -29,7 +29,7 @@ export const projectsData: Project[] = [
             "Engineered path visualizers, shortest distance metrics, and player statistics."
         ],
         techStack: ["React", "TypeScript", "Vite", "MediaWiki API", "Tailwind CSS", "Motion"],
-        imageUrl: "/projects/wiki-game.jpg",
+        imageUrl: "/projects/wiki-game.webp",
         imageAlt: "The Wiki Game interactive gameplay preview",
         githubUrl: "https://github.com/Waryab/WikiGame",
         liveUrl: "https://wikigame.waryab.com/"
@@ -46,7 +46,7 @@ export const projectsData: Project[] = [
             "Integrated serverless contact form submission with live validation feedback."
         ],
         techStack: ["React", "TypeScript", "Tailwind CSS", "Motion", "Vite", "GitHub Actions"],
-        imageUrl: "/projects/web-portfolio.jpg",
+        imageUrl: "/projects/web-portfolio.webp",
         imageAlt: "Personal Web Portfolio showcase preview",
         githubUrl: "https://github.com/Waryab/WebPortfolio2603",
         liveUrl: "https://www.waryab.com/"
