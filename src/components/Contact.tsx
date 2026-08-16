@@ -7,7 +7,7 @@ import { fadeInUp } from "../lib/motionPresets";
 export const Contact = () => {
   const [submission, setSubmission] = useState("");
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", import.meta.env.VITE_FORM_ACCESS_KEY);

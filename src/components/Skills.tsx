@@ -1,4 +1,3 @@
-import React from "react";
 import type { IconType } from "react-icons";
 import { SectionHeader } from "./SectionHeader";
 import { motion } from "motion/react";
@@ -110,10 +109,10 @@ export const Skills = () => (
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
                             {category.skills.map((skill) => (
                                 <div key={skill.name} className="group relative p-6 bg-white/40 backdrop-blur-sm border border-black/5 rounded-2xl flex flex-col items-center justify-center gap-4">
-                                    {React.createElement(skill.icon as any, {
-                                        className: "size-8 drop-shadow-sm",
-                                        style: { color: skill.color }
-                                    })}
+                                    <skill.icon
+                                        className="size-8 drop-shadow-sm"
+                                        style={{ color: skill.color }}
+                                    />
                                     <span className="mono text-[10px] uppercase tracking-widest opacity-40 group-hover:opacity-100 transition-all text-center" >
                                         {skill.name}
                                     </span>
