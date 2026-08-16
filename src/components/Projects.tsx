@@ -6,7 +6,7 @@ import { projectsData } from "../data/projects";
 import type { Project } from "../types/project";
 import { motion, AnimatePresence } from "motion/react";
 import { fadeInUp } from "../lib/motionPresets";
-import { FiArrowUpRight, FiGithub, FiMaximize2 } from "react-icons/fi";
+import { FiArrowUpRight, FiGithub, FiMaximize2, FiExternalLink } from "react-icons/fi";
 
 export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -121,7 +121,7 @@ export const Projects = () => {
                                             className="p-2 rounded-full hover:bg-black/5 transition-colors"
                                             aria-label={`${primaryProject.title} Live Website`}
                                         >
-                                            <FiArrowUpRight className="w-4 h-4 opacity-50 hover:opacity-100 transition-opacity" />
+                                            <FiExternalLink className="w-4 h-4 opacity-50 hover:opacity-100 transition-opacity" />
                                         </a>
                                     )}
                                 </div>
@@ -147,7 +147,7 @@ export const Projects = () => {
                                             className="group/btn flex items-center gap-2 px-5 py-2.5 bg-white/70 border border-black/10 rounded-full mono text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-all cursor-pointer shadow-sm"
                                         >
                                             <span>Live Website</span>
-                                            <FiArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                                            <FiExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                                         </a>
                                     )}
                                 </div>
@@ -246,7 +246,7 @@ export const Projects = () => {
                                                     className="p-2 rounded-full hover:bg-black/5 transition-colors"
                                                     aria-label={`${project.title} Live Demo`}
                                                 >
-                                                    <FiArrowUpRight className="w-4 h-4 opacity-50 hover:opacity-100 transition-opacity" />
+                                                    <FiExternalLink className="w-4 h-4 opacity-50 hover:opacity-100 transition-opacity" />
                                                 </a>
                                             )}
                                         </div>

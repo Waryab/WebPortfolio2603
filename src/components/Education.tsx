@@ -3,6 +3,7 @@ import { SectionHeader } from "./SectionHeader";
 import { ExperienceItem } from "./ExperienceItem";
 import { motion } from "motion/react";
 import { fadeInUp } from "../lib/motionPresets";
+import { educationData } from "../data/education";
 
 export const Education = () => (
   <motion.section
@@ -12,29 +13,16 @@ export const Education = () => (
   >
     <div className="w-full">
       <SectionHeader number="02" title="Education & Training" />
-      <ExperienceItem 
-        role="Bachelor's Degree Applied Computer Science"
-        company="Howest, Bruges"
-        period="Sep 2021 — Jun 2025"
-        description={[
-          "Developed strong programming skills in Java, Python, and JavaScript through project-based coursework.",
-          "Built full-stack applications with REST APIs and relational databases.",
-          "Applied object-oriented programming principles and basic design patterns.",
-          "Collaborated in Agile/Scrum team environments to simulate real industry workflows."
-        ]}
-      />
-      <ExperienceItem 
-        role="Grand Challenge Week"
-        company="Cardiff Metropolitan University"
-        period="Apr 2024"
-        description={[
-          "Conducted research in Cardiff to identify real-world community challenges and define a focused problem statement.",
-          "Analyzed user needs and explored potential digital solutions within a one-week innovation sprint.",
-          "Designed a mobile application concept to address the selected challenge.",
-          "Created structured wireframes and interactive prototypes using Figma.",
-          "Presented the final concept and design solution to peers and academic evaluators."
-        ]}
-      />
+      {educationData.map((edu, index) => (
+        <ExperienceItem
+          key={edu.id || index}
+          role={edu.role}
+          company={edu.company}
+          period={edu.period}
+          description={edu.description}
+        />
+      ))}
     </div>
   </motion.section>
 );
+

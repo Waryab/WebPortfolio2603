@@ -116,7 +116,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 </div>
                             </div>
 
-                            <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-black/10">
+                            <div className="flex items-center justify-between flex-wrap-reverse gap-4 pt-6 border-t border-black/10">
                                 <button
                                     onClick={onClose}
                                     className="mono text-xs uppercase tracking-widest opacity-50 hover:opacity-100 transition-opacity cursor-pointer px-3 py-2"

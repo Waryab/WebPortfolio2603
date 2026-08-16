@@ -2,6 +2,7 @@ import { fadeInUp } from "../lib/motionPresets";
 import { ExperienceItem } from "./ExperienceItem";
 import { SectionHeader } from "./SectionHeader";
 import { motion } from "motion/react";
+import { experienceData } from "../data/experience";
 
 export const Experience = () => (
     <motion.section
@@ -11,19 +12,16 @@ export const Experience = () => (
     >
         <div className="w-full">
             <SectionHeader number="01" title="Work Experience" />
-            <ExperienceItem
-                role="Full Stack Developer - Internship"
-                company="Libaro Digital Innovation Partner"
-                period="Feb 2025 — Jun 2025"
-                description={[
-                    "Contributed to 'LevelUp Desk', an innovative smart standing desk platform combining web, mobile, and IoT.",
-                    "Developed and maintained backend features using Laravel (PHP) and MySQL.",
-                    "Built frontend components using Vue.js, TypeScript, and Tailwind CSS.",
-                    "Implemented a hybrid mobile application using Angular, Ionic, and Capacitor.",
-                    "Integrated external APIs for automated invoicing and server-side push notifications.",
-                    "Designed a fully multilingual system (NL/FR/EN) with SEO-optimized URLs."
-                ]}
-            />
+            {experienceData.map((exp, index) => (
+                <ExperienceItem
+                    key={exp.id || index}
+                    role={exp.role}
+                    company={exp.company}
+                    period={exp.period}
+                    description={exp.description}
+                />
+            ))}
         </div>
     </motion.section>
 );
+
