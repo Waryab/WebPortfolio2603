@@ -18,7 +18,7 @@ export const Hero = () => {
                 <div className="flex flex-col lg:flex-row gap-16 lg:items-end justify-between">
                     <div className="max-w-xl">
                         <p className="text-2xl md:text-4xl leading-[1.4] opacity-70 serif italic tracking-tight">
-                            Building digital experiences that blend technical precision with creative intuition. Based in Bruges, Belgium.
+                            Building digital experiences that blend technical precision with creative intuition.
                         </p>
                     </div>
                     <a
